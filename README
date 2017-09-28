@@ -1,0 +1,19 @@
+Bayesian Learning Algorithm
+Author: Charles Krol
+Developed on MacOS High Sierra (10.13)
+
+To run the program navigate to the program root folder and run
+the appropriate file for your operating system with your training
+and testing files as arguments. These scripts will compile the source
+files and run the program with your files as the arguments.
+
+Ensure you have the latest JDK installed and have updated your PATH environment
+variable to include the locations of java and javac commands.
+
+Linux/Unix/Mac:
+
+$ bash ./run_on_unix_linux.sh train.dat test.dat
+
+Windows:
+
+BayesianLearning>  run_on_windows.bat train.dat test.dat
