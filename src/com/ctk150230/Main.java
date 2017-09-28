@@ -27,7 +27,7 @@ import java.io.IOException;
  * @since 2017-09-26
  */
 public class Main {
-
+    // TODO: implement checks for nonmatching testing and taining files
     public static void main(String[] args) throws IOException{
         if(args[0].equals("--help") || args.length != 2) {
             usage();
