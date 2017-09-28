@@ -17,3 +17,5 @@ $ bash ./run_on_unix_linux.sh train.dat test.dat
 Windows:
 
 BayesianLearning>  run_on_windows.bat train.dat test.dat
+
+For more details on the program see the included JavaDoc

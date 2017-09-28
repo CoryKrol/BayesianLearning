@@ -16,6 +16,13 @@ import java.util.Map;
  * data set such as the number of attributes, data instances, and the number of data instances with
  * positive/negative outcomes.
  *
+ * The <b>attributeMap</b> holds an ArrayList for each Attribute with the attribute values for each data
+ * instance
+ *
+ * The <b>attributeList</b> holds the names of each attribute
+ *
+ * The <b>classifierList</b> holds the final classification value for each data instance
+ *
  * @see ArrayList
  * @see LinkedHashMap
  * @see FileReader

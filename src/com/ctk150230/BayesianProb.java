@@ -101,6 +101,8 @@ class BayesianProb {
 
     /**
      * Calculates conditional probabilities where the Class value is positive
+     * @param attribMap contains attributes values for each data instance contained in the data set
+     * @param classList contains the final classification values for each data instance in the data set
      */
     private void calculatePositiveClassConditional(LinkedHashMap<String, ArrayList<Integer>> attribMap, List<Integer> classList){
 
@@ -140,6 +142,8 @@ class BayesianProb {
 
     /**
      * Calculates conditional probabilities where the Class value is negative
+     * @param attribMap contains attributes values for each data instance contained in the data set
+     * @param classList contains the final classification values for each data instance in the data set
      */
     private void calculateNegativeClassConditional(LinkedHashMap<String, ArrayList<Integer>> attribMap, List<Integer> classList){
 
@@ -212,6 +216,7 @@ class BayesianProb {
 
     /**
      * Rounds calculated probability values to 2 decimal places
+     * @param round the decimal to be rounded to 2 decimal places
      * @return a decimal rounded to 2 decimal places
      */
     private double round2DecimalPlaces(double round){
