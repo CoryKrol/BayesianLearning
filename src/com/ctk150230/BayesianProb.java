@@ -14,6 +14,16 @@ import java.util.Map;
  * probabilities, and calculates the conditional probabilities of each attribute.
  * Upon completion of the calculations the probabilities are output to the console
  *
+ * The <b>classProbabilities</b> ArrayList contains the probabilities of a given data instance
+ * being classified as positive or negative.
+ *
+ * The <b>conditionalProbabilities</b> and <b>negativeConditionalProbabilities</b> LinkedHashMaps
+ * contain ArrayLists that the probabilities of an attribute being classified as positive/negative
+ * given that the data was classified as positive/negative. <b>conditionalProbabilities</b> is given
+ * that the overall data classification was positive and <b>negativeConditionalProbabilities</b> is given
+ * that the overall data classification was negative. The contained ArrayLists contain the conditional probabilities
+ * that the attribute itself is positive or negative.
+ *
  * @see DataSet
  * @see ArrayList
  * @see LinkedHashMap

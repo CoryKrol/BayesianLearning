@@ -17,9 +17,10 @@ import java.util.Map;
  * positive/negative outcomes.
  *
  * The <b>attributeMap</b> holds an ArrayList for each Attribute with the attribute values for each data
- * instance
+ * instance. Each LinkedHashMap corresponds to an attribute and the each entry in the contained ArrayLists
+ * corresponds to a data instance.
  *
- * The <b>attributeList</b> holds the names of each attribute
+ * The <b>attributeList</b> holds the names of each attribute.
  *
  * The <b>classifierList</b> holds the final classification value for each data instance
  *

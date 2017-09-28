@@ -12,6 +12,10 @@ import java.util.Map;
  * A subclass of the DataSet class used to test the calculated probabilities from the
  * BayesianProb class and output the results to the console.
  *
+ * <b>testData</b> contains LinkedHashMaps holding the attribute values for each data instance.
+ * An entry in the List corresponds to a data instance and each contained LinkedHashMap holds
+ * that instance's values on each attribute.
+ *
  * @see DataSet
  * @see BayesianProb
  * @see ArrayList
