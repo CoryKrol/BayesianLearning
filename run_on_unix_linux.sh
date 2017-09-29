@@ -2,6 +2,7 @@
 
 if [ $# -eq 2 ]
   then
+    mkdir -p out/production/BayesianLearning
     find ./src/com/ctk150230/ -name "*.java" > sources.txt
     javac @sources.txt -d ./out/production/BayesianLearning/
 
