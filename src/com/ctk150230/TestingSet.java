@@ -1,6 +1,7 @@
 package com.ctk150230;
 
 import java.io.IOException;
+import java.lang.NullPointerException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -99,7 +100,7 @@ class TestingSet extends DataSet {
             double negativeProbability = testNegative(trainingData, instance);
 
             // If correctly classified as positive or negative increment correct, else do nothing
-            if ((positiveProbability >= negativeProbability) && (super.getClassifierList().get(i) == 1))
+            if ((positiveProbability > negativeProbability) && (super.getClassifierList().get(i) == 1))
                 correct++;
             else if ((positiveProbability < negativeProbability) && (super.getClassifierList().get(i) == 0))
                 correct++;
@@ -123,16 +124,21 @@ class TestingSet extends DataSet {
      */
     private double testPositive(BayesianProb trainingData, LinkedHashMap<String, Integer> instance) {
         double positiveProbability = 1;
-        //TODO: Fix testing functions
 
         // Iterate through attributes and grab the right conditional probability from the training data
         // for the specified attribute value
-        for (Map.Entry<String, Integer> entry : instance.entrySet()) {
-            if (entry.getValue() == 1)
-                positiveProbability *= trainingData.getConditionalProbabilities().get(entry.getKey()).get(1);
-            else
-                positiveProbability *= trainingData.getConditionalProbabilities().get(entry.getKey()).get(0);
-        }
+        try {
+            for (Map.Entry<String, Integer> entry : instance.entrySet()) {
+                if (entry.getValue() == 1)
+                    positiveProbability *= trainingData.getConditionalProbabilities().get(entry.getKey()).get(1);
+                else
+                    positiveProbability *= trainingData.getConditionalProbabilities().get(entry.getKey()).get(0);
+            }
+        }catch (NullPointerException e) {
+                System.out.println("Error: Mismatched Attributes, are you sure you selected the proper training/testing pair?");
+                System.exit(1);
+            }
+
         // Multiply by the probability of a classification being positive and return the value
         return positiveProbability * trainingData.getClassProbabilities().get(1);
     }

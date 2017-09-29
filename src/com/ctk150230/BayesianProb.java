@@ -197,7 +197,6 @@ class BayesianProb {
     private void printProbabilities(){
 
         // Grab the list of Attribute names to print out the "class" name
-        // TODO: There is probably a better way to get this one String
         List<String> attributeList = dataSet.getAttributeList();
 
         // Iterate over the positive and negative class probabilities
